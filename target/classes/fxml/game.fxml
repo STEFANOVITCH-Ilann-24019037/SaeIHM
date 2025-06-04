@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bomberman.ui.GameController">
+    <top>
+        <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #2c3e50;">
+            <children>
+                <Label text="BOMBERMAN" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+
+                <HBox alignment="CENTER" spacing="30.0">
+                    <children>
+                        <Label fx:id="scoreLabel" text="Score: 0" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+
+                        <Label fx:id="viesLabel" text="Vies: 3" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+
+                        <Label fx:id="bombesLabel" text="Bombes: 1" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#nouvellePartie"
+                                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;"
+                                text="Nouvelle Partie" />
+
+                        <Button mnemonicParsing="false" onAction="#afficherScores"
+                                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;"
+                                text="Scores" />
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+        </VBox>
+    </top>
+
+    <center>
+        <Canvas fx:id="gameCanvas" height="390.0" width="450.0"
+                style="-fx-background-color: white; -fx-border-color: #34495e; -fx-border-width: 3px;" />
+    </center>
+
+    <bottom>
+        <VBox alignment="CENTER" spacing="5.0" style="-fx-background-color: #34495e;">
+            <children>
+                <Label text="Contrôles:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+
+                <HBox alignment="CENTER" spacing="20.0">
+                    <children>
+                        <Label text="ZQSD / Flèches: Déplacement" textFill="WHITE">
+                            <font>
+                                <Font size="12.0" />
+                            </font>
+                        </Label>
+
+                        <Label text="ESPACE: Poser une bombe" textFill="WHITE">
+                            <font>
+                                <Font size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <Label text="🟦 Joueur" textFill="WHITE" />
+                        <Label text="🔴 Ennemis" textFill="WHITE" />
+                        <Label text="⚫ Bombes" textFill="WHITE" />
+                        <Label text="🟨 Bonus Bombes" textFill="WHITE" />
+                        <Label text="🟪 Bonus Portée" textFill="WHITE" />
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+    </bottom>
+</BorderPane>
