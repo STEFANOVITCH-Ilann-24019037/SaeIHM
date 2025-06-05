@@ -6,7 +6,12 @@ public class Bonus {
     private boolean consomme;
 
     public enum TypeBonus {
-        BOMBE_PLUS, PORTEE_PLUS, VIE_PLUS
+        BOMBE_PLUS,     // +1 bombe
+        PORTEE_PLUS,    // +1 portée
+        VIE_PLUS,       // +1 vie
+        VITESSE_PLUS,   // Augmente la vitesse de déplacement
+        INVINCIBLE,     // Invincibilité temporaire (5 secondes)
+        MEGA_BOMBE      // Prochaine bombe a une portée maximale
     }
 
     public Bonus(int x, int y, TypeBonus type) {
